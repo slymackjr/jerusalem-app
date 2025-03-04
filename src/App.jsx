@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { InvoiceReport, Home, AllMembers, AllUsers, Login, AllDiscounts, Profile, CompanyProfile, AllPackages, StudentDashboard, AdminDashboard, TeacherDashboard, CashierDashboard, Payment } from "./pages";
+import { InvoiceReport, Home, Login, Profile, CompanyProfile, StudentDashboard, AdminDashboard, TeacherDashboard, CashierDashboard, Payment, Results, StudentProfile, CashierProfile } from "./pages";
 // import { ProtectedRoutes } from "./Auth";
 
 function App() {
@@ -13,17 +13,16 @@ function App() {
         <Route path="/admin/dashboard" element={<AdminDashboard />} />
         <Route path="/cashier/dashboard" element={<CashierDashboard />} />
         <Route path="/cashier/payment" element={<Payment />} />
+        <Route path="/student/results" element={<Results />} />
+        <Route path="/student/profile" element={<StudentProfile />} />
+        <Route path="/cashier/profile" element={<CashierProfile />} />
         
         {/* <Route element={<ProtectedRoutes />}> */}
-          <Route path="/all-members" element={<AllMembers />} />
           <Route path="/invoice-report" element={<InvoiceReport />} />
           <Route path="/profile" element={<Profile />} />
         {/* </Route> */}
 
         {/* <Route element={<ProtectedRoutes role="admin" />}> */}
-          <Route path="/all-users" element={<AllUsers />} />
-          <Route path="/all-discounts" element={<AllDiscounts />} />
-          <Route path="/all-packages" element={<AllPackages />} />
           <Route path="/company" element={<CompanyProfile />} />
         {/* </Route> */}
       </Routes>
