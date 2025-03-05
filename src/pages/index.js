@@ -12,6 +12,8 @@ import Payment from "./cashier/Payment";
 import Results from "./students/Results";
 import StudentProfile from "./students/StudentProfile";
 import CashierProfile from "./cashier/CashierProfile";
+import ResultsUpload from "./teachers/ResultsUpload";
+import TeacherProfile from "./teachers/TeacherProfile";
 
 export {
     Home,
@@ -27,5 +29,7 @@ export {
     Payment,
     Results,
     StudentProfile,
-    CashierProfile
+    CashierProfile,
+    ResultsUpload,
+    TeacherProfile
 }
