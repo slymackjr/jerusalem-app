@@ -80,7 +80,7 @@ export default function StudentProfile() {
           <div className="absolute inset-0 bg-gradient-to-t from-blue-900 to-transparent opacity-50"></div>
           <div className="absolute bottom-6 left-6 flex items-center">
             <label htmlFor="avatarUpload" className="cursor-pointer">
-              <div className="relative">
+              <div className="relative flex">
                 <img
                   src={avatar ? URL.createObjectURL(avatar) : studentAvatar}
                   alt="Student Avatar"
@@ -112,7 +112,7 @@ export default function StudentProfile() {
         <div className="p-6 md:p-12 max-w-4xl mx-auto">
           {/* Student Info Cards */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-            <div className="bg-white shadow-lg rounded-lg p-6 flex items-center hover:bg-green-50 transition duration-300 transform hover:-translate-y-2">
+            <div className="bg-white shadow-lg rounded-lg p-6 flex items-center">
               <User className="text-green-600 mr-4" size={40} />
               <div>
                 <h3 className="text-xl font-semibold text-gray-700">Student Details</h3>
@@ -120,7 +120,7 @@ export default function StudentProfile() {
                 <p className="text-gray-500">{dummyStudent.email}</p>
               </div>
             </div>
-            <div className="bg-white shadow-lg rounded-lg p-6 flex items-center hover:bg-orange-50 transition duration-300 transform hover:-translate-y-2">
+            <div className="bg-white shadow-lg rounded-lg p-6 flex items-center">
               <DollarSign className="text-orange-600 mr-4" size={40} />
               <div>
                 <h3 className="text-xl font-semibold text-gray-700">Payment Status</h3>
@@ -128,7 +128,7 @@ export default function StudentProfile() {
                 <p className="text-gray-500">{((dummyStudent.totalFees - dummyStudent.feesDue) / dummyStudent.totalFees * 100).toFixed(1)}% Paid</p>
               </div>
             </div>
-            <div className="bg-white shadow-lg rounded-lg p-6 flex items-center hover:bg-blue-50 transition duration-300 transform hover:-translate-y-2">
+            <div className="bg-white shadow-lg rounded-lg p-6 flex items-center">
               <BookOpen className="text-blue-600 mr-4" size={40} />
               <div>
                 <h3 className="text-xl font-semibold text-gray-700">Results Summary</h3>

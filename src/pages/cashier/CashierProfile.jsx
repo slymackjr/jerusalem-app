@@ -108,7 +108,7 @@ export default function CashierProfile() {
         <div className="p-6 md:p-12 max-w-4xl mx-auto">
           {/* Cashier Info Cards */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-            <div className="bg-white shadow-lg rounded-lg p-6 flex items-center hover:bg-blue-50 transition duration-300 transform hover:-translate-y-2 hover:shadow-xl">
+            <div className="bg-white shadow-lg rounded-lg p-6 flex items-center">
               <User className="text-blue-600 mr-4" size={40} />
               <div>
                 <h3 className="text-xl font-semibold text-gray-700">Cashier Details</h3>
@@ -116,7 +116,7 @@ export default function CashierProfile() {
                 <p className="text-gray-500">{dummyCashier.email}</p>
               </div>
             </div>
-            <div className="bg-white shadow-lg rounded-lg p-6 flex items-center hover:bg-green-50 transition duration-300 transform hover:-translate-y-2 hover:shadow-xl">
+            <div className="bg-white shadow-lg rounded-lg p-6 flex items-center">
               <DollarSign className="text-green-600 mr-4" size={40} />
               <div>
                 <h3 className="text-xl font-semibold text-gray-700">Payments Today</h3>
@@ -124,7 +124,7 @@ export default function CashierProfile() {
                 <p className="text-gray-500">{dummyCashier.transactionsToday} Transactions</p>
               </div>
             </div>
-            <div className="bg-white shadow-lg rounded-lg p-6 flex items-center hover:bg-orange-50 transition duration-300 transform hover:-translate-y-2 hover:shadow-xl">
+            <div className="bg-white shadow-lg rounded-lg p-6 flex items-center">
               <FileText className="text-orange-600 mr-4" size={40} />
               <div>
                 <h3 className="text-xl font-semibold text-gray-700">Total Processed</h3>

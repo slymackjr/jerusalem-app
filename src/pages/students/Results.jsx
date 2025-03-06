@@ -109,7 +109,7 @@ export default function Results() {
             <button
               key={period}
               onClick={() => setSelectedPeriod(period)}
-              className={`px-6 py-2 rounded-full font-semibold text-white transition-all duration-300 transform hover:scale-105 ${
+              className={`px-6 py-2 rounded-full font-semibold text-white transition-all duration-300 hover:scale-105 ${
                 selectedPeriod === period
                   ? "bg-blue-600 shadow-lg"
                   : "bg-gray-400 hover:bg-gray-500"
