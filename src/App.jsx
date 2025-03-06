@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { InvoiceReport, Home, Login, Profile, CompanyProfile, StudentDashboard, AdminDashboard, TeacherDashboard, CashierDashboard, Payment, Results, StudentProfile, CashierProfile, ResultsUpload, TeacherProfile } from "./pages";
+import { InvoiceReport, Home, Login, StudentDashboard, AdminDashboard, TeacherDashboard, CashierDashboard, Payment, Results, StudentProfile, CashierProfile, ResultsUpload, TeacherProfile, AdminProfile, ManagementUsers } from "./pages";
 // import { ProtectedRoutes } from "./Auth";
 
 function App() {
@@ -18,18 +18,17 @@ function App() {
         <Route path="/cashier/profile" element={<CashierProfile />} />
         <Route path="/teacher/results-upload" element={<ResultsUpload />} />
         <Route path="/teacher/profile" element={<TeacherProfile />} />
+        <Route path="/admin/profile" element={<AdminProfile />} />
+        <Route path="/admin/management-users" element={<ManagementUsers />} />
 
         {/* <Route element={<ProtectedRoutes />}> */}
           <Route path="/invoice-report" element={<InvoiceReport />} />
-          <Route path="/profile" element={<Profile />} />
         {/* </Route> */}
 
         {/* <Route element={<ProtectedRoutes role="admin" />}> */}
-          <Route path="/company" element={<CompanyProfile />} />
         {/* </Route> */}
       </Routes>
     </Router>
   );
 }
-
 export default App;

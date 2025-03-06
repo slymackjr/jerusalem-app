@@ -1,9 +1,6 @@
 import Home from "./Home";
 import InvoiceReport from "./InvoiceReport";
 import Login from "./Login";
-import AllUsers from "./AllUsers";
-import Profile from "./Profile";
-import CompanyProfile from "./CompanyProfile";
 import StudentDashboard from "./students/StudentDashboard";
 import AdminDashboard from "./admin/AdminDashboard";
 import TeacherDashboard from "./teachers/TeacherDashboard";
@@ -14,14 +11,13 @@ import StudentProfile from "./students/StudentProfile";
 import CashierProfile from "./cashier/CashierProfile";
 import ResultsUpload from "./teachers/ResultsUpload";
 import TeacherProfile from "./teachers/TeacherProfile";
+import AdminProfile from "./admin/AdminProfile";
+import ManagementUsers from "./admin/ManagementUsers";
 
 export {
     Home,
     InvoiceReport,
     Login,
-    AllUsers,
-    Profile,
-    CompanyProfile,
     StudentDashboard,
     AdminDashboard,
     TeacherDashboard,
@@ -31,5 +27,7 @@ export {
     StudentProfile,
     CashierProfile,
     ResultsUpload,
-    TeacherProfile
+    TeacherProfile,
+    AdminProfile,
+    ManagementUsers
 }
