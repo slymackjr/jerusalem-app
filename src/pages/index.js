@@ -1,5 +1,4 @@
 import Home from "./Home";
-import InvoiceReport from "./InvoiceReport";
 import Login from "./Login";
 import StudentDashboard from "./students/StudentDashboard";
 import AdminDashboard from "./admin/AdminDashboard";
@@ -16,7 +15,6 @@ import ManagementUsers from "./admin/ManagementUsers";
 
 export {
     Home,
-    InvoiceReport,
     Login,
     StudentDashboard,
     AdminDashboard,

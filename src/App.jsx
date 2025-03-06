@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { InvoiceReport, Home, Login, StudentDashboard, AdminDashboard, TeacherDashboard, CashierDashboard, Payment, Results, StudentProfile, CashierProfile, ResultsUpload, TeacherProfile, AdminProfile, ManagementUsers } from "./pages";
+import { Home, Login, StudentDashboard, AdminDashboard, TeacherDashboard, CashierDashboard, Payment, Results, StudentProfile, CashierProfile, ResultsUpload, TeacherProfile, AdminProfile, ManagementUsers } from "./pages";
 // import { ProtectedRoutes } from "./Auth";
 
 function App() {
@@ -22,7 +22,6 @@ function App() {
         <Route path="/admin/management-users" element={<ManagementUsers />} />
 
         {/* <Route element={<ProtectedRoutes />}> */}
-          <Route path="/invoice-report" element={<InvoiceReport />} />
         {/* </Route> */}
 
         {/* <Route element={<ProtectedRoutes role="admin" />}> */}
