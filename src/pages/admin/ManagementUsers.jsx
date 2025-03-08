@@ -269,7 +269,6 @@ export default function ManagementUsers() {
             value={search}
             onChange={handleSearch}
           />
-          <div className="flex gap-4 items-center">
             <select
               className="border px-4 py-2 rounded-lg bg-gray-50 text-gray-700 focus:ring-2 focus:ring-purple-500"
               value={rowsPerPage}
@@ -308,7 +307,6 @@ export default function ManagementUsers() {
             >
               <Upload size={20} className="mr-2" /> Upload CSV
             </button>
-          </div>
         </div>
 
         {/* Users Table */}

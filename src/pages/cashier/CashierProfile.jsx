@@ -67,42 +67,38 @@ export default function CashierProfile() {
     <Sidebar activePage="profile" alertPages="profile">
       <div className="min-h-screen bg-gradient-to-b from-green-50 to-gray-100 text-gray-800">
         {/* Banner Section */}
-        <div className="relative h-48 md:h-64 bg-green-800 overflow-hidden">
-          <img
-            src={bannerImage}
-            alt="Office Desk Banner"
-            className="w-full h-full object-cover opacity-70"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-green-900 to-transparent opacity-50"></div>
-          <div className="absolute bottom-6 left-6 flex items-center">
-            <label htmlFor="avatarUpload" className="cursor-pointer">
-              <div className="relative group">
-                <img
-                  src={avatar ? URL.createObjectURL(avatar) : cashierAvatar}
-                  alt="Cashier Avatar"
-                  className="w-24 h-24 md:w-32 md:h-32 rounded-full border-4 border-white shadow-lg transform hover:scale-110 transition-transform duration-300"
-                />
-                <UploadCloud
-                  className="absolute bottom-0 right-0 bg-orange-600 text-white p-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                  size={24}
-                />
-              </div>
-            </label>
-            <input
-              type="file"
-              id="avatarUpload"
-              className="hidden"
-              accept="image/*"
-              onChange={handleAvatarChange}
-              onDragOver={handleDragOver}
-              onDrop={handleDrop}
-            />
-            <div className="ml-4 text-white">
-              <h1 className="text-2xl md:text-3xl font-bold animate-fade-in">{dummyCashier.name}</h1>
-              <p className="text-sm md:text-md animate-fade-in">{dummyCashier.role}</p>
-            </div>
-          </div>
-        </div>
+        <div className="bg-cover bg-center overflow-hidden flex flex-col justify-end p-6 gap-4 bg-black/50 bg-blend-overlay"
+          style={{ backgroundImage: `url(${bannerImage})` }}>
+          <div className="bg-gradient-to-t from-purple-900 to-transparent w-full h-1/3" />
+              <div className="flex items-center gap-4">
+                <label htmlFor="avatarUpload" className="cursor-pointer group">
+                  <div className="flex items-center justify-center">
+                    <img
+                      src={avatar ? URL.createObjectURL(avatar) : cashierAvatar}
+                      alt="Admin Avatar"
+                      className="w-24 h-24 md:w-32 md:h-32 rounded-full border-4 border-white shadow-lg"
+                        />
+                    <UploadCloud
+                      className="bg-orange-600 text-white p-1 rounded-full group-hover:opacity-100 transition-opacity duration-300 ml-[-2rem] mt-[6rem]"
+                      size={24}
+                        />
+                  </div>
+                </label>
+                <input
+                  type="file"
+                  id="avatarUpload"
+                  className="hidden"
+                  accept="image/*"
+                  onChange={handleAvatarChange}
+                  onDragOver={handleDragOver}
+                  onDrop={handleDrop}
+                    />
+                  <div className="text-white">
+                    <h1 className="text-2xl md:text-3xl font-bold animate-fade-in">{dummyCashier.name}</h1>
+                    <p className="text-sm md:text-md animate-fade-in">{dummyCashier.role}</p>
+                  </div>
+                </div>
+              </div>       
 
         {/* Profile Content */}
         <div className="p-6 md:p-12 max-w-4xl mx-auto">
