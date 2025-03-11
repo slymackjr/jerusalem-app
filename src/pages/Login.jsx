@@ -64,13 +64,12 @@ const LoginForm = ({ selectedRole, onExit }) => {
 
   const { mutate: login, isPending: isLoading } = useMutation({
     mutationFn: async () => {
-      const response = await axiosInstance.post("/login", formData);
+      const response = await axiosInstance.post("/auth/login", formData);
       return response.data;
     },
     onSuccess: (data) => {
       if (data.success === true) {
-        const { token, ability, user } = data;
-        const role = ability;
+        const { token, role, user } = data;
 
         dispatch(setAuth({ token, role, user }));
         toast.success(data.message || "Login successful.", { position: "top-center" });
