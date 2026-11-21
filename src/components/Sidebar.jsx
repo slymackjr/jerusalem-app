@@ -19,7 +19,7 @@ import { MenuIcon } from "lucide-react";
 import PropTypes from 'prop-types';
 import { logo3, user } from "../assets";
 import { Permission } from "../hooks";
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { clearAuth } from "../redux/authSlice";
 import { useQueryClient } from '@tanstack/react-query';
 

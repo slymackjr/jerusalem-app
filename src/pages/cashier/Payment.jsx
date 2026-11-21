@@ -369,6 +369,7 @@ export default function CashierDashboard() {
           onClose={closeModal}
           editPayment={editPayment}
           onSave={updatePayment}
+          payments={dummyStudentPayments}
         />
       </div>
     </Sidebar>

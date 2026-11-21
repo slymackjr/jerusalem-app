@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-export default function AddPaymentModal({ isOpen, onClose, editPayment, onSave }) {
+export default function AddPaymentModal({ isOpen, onClose, editPayment, onSave, payments }) {
   const [studentId, setStudentId] = useState("");
   const [amount, setAmount] = useState("");
   const [date, setDate] = useState(new Date().toISOString().split("T")[0]); // Default to today
@@ -33,7 +33,7 @@ export default function AddPaymentModal({ isOpen, onClose, editPayment, onSave }
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    const student = dummyStudentPayments.find((s) => s.id === studentId);
+    const student = payments.find((payment) => payment.id === studentId);
     if (!student && !editPayment) {
       toast.error("Student ID not found!", { position: "top-center" });
       return;
@@ -129,4 +129,5 @@ AddPaymentModal.propTypes = {
   onClose: PropTypes.func.isRequired,
   editPayment: PropTypes.object,
   onSave: PropTypes.func.isRequired,
+  payments: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
